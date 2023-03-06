@@ -41,10 +41,34 @@ Deploying MyToken contract
 MyToken contract address: 0x8A43A1A0bBcC6a2247cEcc359693E137Ff602988
 ```
 
-### Funcstion calls
+### Function calls
 
 To call a function use `Main.ts` and following arguments:
 `<CONTRACT_NAME> <CONTRACT_ADDRESS> <FUNCTION_NAME> <FUNCTION_PARAMETER_1> <FUNCTION_PARAMETER_2> ...`
+
+
+
+| Contract Name | Contract Address                           | Function name     | Parameters                                                           |
+| ------------- | ------------------------------------------ | ----------------- | -------------------------------------------------------------------- |
+| MyToken       | 0xf25c12a84c430eeddefb25779daa42ed0328ddf5 | grantRole         | 1. Address for which we want to assign MINT_ROLE role                |
+|               |                                            | mint              | 1. Address to which we want to send tokens <br> 2.  Amount of tokens |
+|               |                                            | transfer          | 1. Address to which we want to send tokens<br> 2.Amount of tokens    |
+|               |                                            | delegate          | 1. Address to which we want to delegate                              |
+| Ballot        | 0x82Be4D82591407DB52E2B360F6502B4D96811A2e | vote              | 1. Proposal index<br>2. amount of tokens                             |
+|               |                                            | votingPower       | 1. Address for which we want check voting Power                      |
+|               |                                            | votingOpen        |                                                                      |
+|               |                                            | openVoting        | 1. Number of votes voting can last from current block                |
+|               |                                            | reset             | 1. New target block number for voting power                          |
+|               |                                            | targetBlockNumber |                                                                      |
+|               |                                            | votingEndsAtBlock |                                                                      |
+|               |                                            | votingPowerSpent  | 1. Address to check voting power spent                               |
+|               |                                            | voters            |                                                                      |
+|               |                                            | proposals         |                                                                      |
+|               |                                            | winningProposal   |                                                                      |
+|               |                                            | winnerName        |                                                                      |
+
+
+
 
 All the possible interactions are implemented in `./scripts/Main.ts` script. Example of function calls:
 

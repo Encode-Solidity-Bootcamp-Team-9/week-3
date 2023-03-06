@@ -28,6 +28,24 @@ PRIVATE_KEY="***"
 ALCHEMY_API_KEY="***"
 ```
 
+### Deploy contracts
+
+To deploy the contracts, `Deployment.ts` can be used. The script will prompt you for the type of contract you want to deploy and ask you for additonal parameters if needed.
+
+```
+$ yarn run ts-node --files ./scripts/Deployment.ts
+Wallet address: 0x180b30Cca80073E5a2807CA3343dB96A2C0A6995
+Balance: 9832704907716562628
+Do you want to deploy Token [1] or Ballot Contract [2] or exit [3]: 1
+Deploying MyToken contract
+MyToken contract address: 0x8A43A1A0bBcC6a2247cEcc359693E137Ff602988
+```
+
+### Funcstion calls
+
+To call a function use `Main.ts` and following arguments:
+`<CONTRACT_NAME> <CONTRACT_ADDRESS> <FUNCTION_NAME> <FUNCTION_PARAMETER_1> <FUNCTION_PARAMETER_2> ...`
+
 All the possible interactions are implemented in `./scripts/Main.ts` script. Example of function calls:
 
 ```bash
